@@ -1,73 +1,107 @@
-
-body{
-
- 
+body {
     background-image: url("Grid_Background.jpg");
-    background-size: 100%,200%;
-    
-
-
-
-
+    background-size: cover;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
-.Calculator-Display{
+
+.Calculator-Display {
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:rgb(17, 15, 15);
+    background-color: rgb(17, 15, 15);
     border-radius: 15px;
+    width: 100%;
     max-width: 500px;
+    padding: 20px;
     overflow: hidden;
-
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
-#Display{ 
+#Display {
     width: 100%;
     height: 100px;
-    font-size: 5rem;
-    text-align: left;
-    background-color:rgb(43, 39, 39);
-    color: aliceblue;
-    
-}
-
-#Cal-Keys{
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 10px;
-
-
-}
-
-button{
-
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    border: none;
-    background-color:hsl(0, 0%, 30%);
-    color: rgb(255, 255, 255);
     font-size: 3rem;
+    text-align: left;
+    background-color: rgb(43, 39, 39);
+    border-radius: 10px;
+    color: aliceblue;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#Cal-Keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    height: 80px;
+    border-radius: 15px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
     font-weight: bold;
-    margin: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
 }
-button:hover{
-    background-color:hsl(0, 0%, 45%);
+
+button:hover {
+    background-color: hsl(0, 0%, 45%);
 }
-button:active{
-    background-color:hsl(0, 0%, 60%);
+
+button:active {
+    background-color: hsl(0, 0%, 60%);
 }
-.oper-btn{
 
-    background-color:hsl(35, 100%, 55%);
-
+.oper-btn {
+    background-color: hsl(35, 100%, 55%);
 }
-.oper-btn:hover{
 
-    background-color:hsl(35, 100%, 65%);
-
+.oper-btn:hover {
+    background-color: hsl(35, 100%, 65%);
 }
-.oper-btn:active{
 
-    background-color:hsl(35, 100%, 75%);
+.oper-btn:active {
+    background-color: hsl(35, 100%, 75%);
+}
 
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    #Display {
+        font-size: 1.5rem;
+        height: 60px;
+        border-radius: 10px;
+    }
+
+    button {
+        height: 60px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .Calculator-Display {
+        padding: 10px;
+    }
+
+    #Display {
+        font-size: 1.2rem;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    button {
+        height: 50px;
+        font-size: 1rem;
+    }
 }
